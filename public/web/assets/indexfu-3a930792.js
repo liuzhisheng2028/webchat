@@ -1,0 +1,1 @@
+import{_ as o}from"./IframeFile-52fc7523.js";import{_ as s,c as t,a as r,o as e}from"./index-79206158.js";import"./PcTopCenter-2cc6ea36.js";const n={class:"content-box"};const a=s({},[["render",function(s,a){const c=o;return e(),t("div",n,[r(c)])}]]);export{a as default};

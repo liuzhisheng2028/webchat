@@ -1,0 +1,1 @@
+import{a3 as r}from"./index-79206158.js";const o={to:[String,Object],url:String,replace:Boolean};function e({to:r,url:o,replace:e,$router:t}){r&&t?t[e?"replace":"push"](r):o&&(e?location.replace(o):location.href=o)}function t(){const o=r().proxy;return()=>e(o)}export{e as a,o as r,t as u};

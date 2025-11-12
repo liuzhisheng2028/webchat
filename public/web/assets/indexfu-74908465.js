@@ -1,0 +1,1 @@
+import{_ as s}from"./IframeFile-52fc7523.js";import{_ as e,c as o,a as t,o as n}from"./index-79206158.js";import"./PcTopCenter-2cc6ea36.js";const r={class:"content-box"};const a=e({},[["render",function(e,a){const i=s;return n(),o("div",r,[t(i,{urlName:"solutions/supplier-relationship-management/index.html"})])}]]);export{a as default};

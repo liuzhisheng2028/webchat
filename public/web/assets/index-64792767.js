@@ -1,0 +1,1 @@
+import{d as s,c as a,a as e,Q as t,o as n,Z as r,_ as o}from"./index-79206158.js";const i={class:"main-page"},l=["src"],c=o(s({__name:"index",setup:s=>(s,o)=>{const c=r;return n(),a("div",i,[e(c,{flag:!1}),t("img",{src:s.$globalUrls("/image/reset bonus event.png"),width:"100%",style:{"margin-top":"1rem"}},null,8,l)])}}),[["__scopeId","data-v-c5b6f612"]]);export{c as default};

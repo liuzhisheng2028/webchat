@@ -1,0 +1,1 @@
+import{d as a,c as s,a as e,Q as r,o as t,Z as c,_ as i}from"./index-79206158.js";const l={class:"main-page"},n=["src"],o=i(a({__name:"index",setup:a=>(a,i)=>{const o=c;return t(),s("div",l,[e(o,{flag:!1}),r("img",{src:a.$globalUrls("/image/basic salary.png"),width:"100%",style:{"margin-top":"1rem"}},null,8,n)])}}),[["__scopeId","data-v-e366cebc"]]);export{o as default};
