@@ -1164,13 +1164,12 @@ if (!function_exists('aj_get_serevice')) {
 
 if(!function_exists('get_ip_name')){
     function get_ip_name($ip){
-        $ip ="162.158.193.35";
+
          $url = 'https://api.141w.xyz/ip-info?ip='.$ip.'&lan=zh-CN';
 
          $data = json_decode(file_get_contents($url), true);
 
-            $last_ip_name = $data['data']??'false';
 
-        return $last_ip_name;
+        return $data['data']??'false';
     }
 }

@@ -14,6 +14,7 @@ namespace app\services\chat;
 
 use app\dao\chat\ChatServiceDao;
 use app\services\ApplicationServices;
+use app\services\chat\user\ChatUserLabelAssistServices;
 use app\services\other\QrcodeServices;
 use crmeb\basic\BaseServices;
 use crmeb\exceptions\AdminException;
@@ -200,6 +201,8 @@ class ChatServiceServices extends BaseServices
             }
             $userInfo = $userInfo->toArray();
         }
+        //更新标签
+        app(ChatUserLabelAssistServices::class)->setUserTypeLabel($userInfo,$user);
         //获取当前分配客服
         $toUserId = $this->dao->count(['appid' => $appId, 'status' => 1, 'user_id' => $toUserId]) ? $toUserId : 0;
         if (!$toUserId && $kefuId) {
