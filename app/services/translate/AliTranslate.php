@@ -19,7 +19,7 @@ class AliTranslate extends TranslateAbstract
         //
         $client = self::createClient();
         $request = new TranslateRequest([
-            "formatType" => 'text',
+            "formatType" => 'html',
             "scene" => 'social',
             "sourceLanguage" => $from,
             "targetLanguage" => $to,
