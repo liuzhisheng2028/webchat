@@ -66,7 +66,6 @@ class Service extends AuthController
             ['avatar', ''],
             ['openid', ''],
             ['type', ''],
-            ['acc_type', ''],
         ]);
         //优先使用指定客服
         if ($kefuUd && $toUserId) {

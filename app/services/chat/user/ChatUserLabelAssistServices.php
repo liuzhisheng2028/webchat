@@ -13,8 +13,6 @@ namespace app\services\chat\user;
 
 
 use app\dao\chat\user\ChatUserLabelAssistDao;
-use app\dao\chat\user\ChatUserLabelDao;
-use app\services\chat\ChatUserServices;
 use crmeb\basic\BaseServices;
 use crmeb\exceptions\AdminException;
 
@@ -109,26 +107,4 @@ class ChatUserLabelAssistServices extends BaseServices
         }
         return $this->dao->saveAll($data);
     }
-    public function setUserTypeLabel($userinfo,$third_user)
-    {
-        $label='';
-        if(!empty($third_user['acc_type'])){
-            if($third_user['acc_type']==1){
-                $label="真";
-            }elseif(in_array($third_user['acc_type'],[2])){
-                $label="假";
-            }
-        }
-        if(!empty($label)){
-            $ChatUserLabelServices = app(ChatUserLabelServices::class);
-            $user_label = $ChatUserLabelServices->getOne(['label'=>$label]);
-            if(empty($user_label)){
-                $user_label = $ChatUserLabelServices->save(['label'=>$label]);
-            }
-            $this->save(['user_id'=>$userinfo['id'],'label_id'=>$user_label['id']]);
-        }
-
-    }
-
-
 }
