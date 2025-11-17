@@ -111,6 +111,7 @@ class ChatUserLabelAssistServices extends BaseServices
     }
     public function setUserTypeLabel($userinfo,$third_user)
     {
+
         $label='';
         if(!empty($third_user['acc_type'])){
             if($third_user['acc_type']==1){
@@ -119,12 +120,14 @@ class ChatUserLabelAssistServices extends BaseServices
                 $label="假";
             }
         }
+
         if(!empty($label)){
             $ChatUserLabelServices = app(ChatUserLabelServices::class);
             $user_label = $ChatUserLabelServices->getOne(['label'=>$label]);
             if(empty($user_label)){
                 $user_label = $ChatUserLabelServices->save(['label'=>$label]);
             }
+//            var_dump($user_label);
             $this->save(['user_id'=>$userinfo['id'],'label_id'=>$user_label['id']]);
         }
 
