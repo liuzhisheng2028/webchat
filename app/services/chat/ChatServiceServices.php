@@ -272,7 +272,7 @@ class ChatServiceServices extends BaseServices
             'to_user_avatar' => $toUserInfo['avatar']
         ];
         //查找聊天记录
-        $serviceLogList = $logServices->getServiceChatList(['appid' => $appId, 'to_user_id' => $userId], $limit, $idTo);
+        $serviceLogList = $logServices->getServiceChatList(['appid' => $appId, 'to_user_id' => $userId,'is_deleted'=>0], $limit, $idTo);
         $result['serviceList'] = array_reverse($logServices->tidyChat($serviceLogList));
         $result['welcome'] = $idTo ? false : $this->welcomeWordsV2($appId, $toUserId, $userId);
         return $result;

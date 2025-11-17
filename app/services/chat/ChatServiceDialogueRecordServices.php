@@ -238,4 +238,7 @@ class ChatServiceDialogueRecordServices extends BaseServices
 
         return $this->dao->getLastRecord($where);
     }
+    public function softdelete($id){
+        return $this->dao->update($id,['is_deleted'=>1]);
+    }
 }

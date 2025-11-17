@@ -95,6 +95,7 @@ Route::group('api', function () {
                 Route::put('backstage/:backstage', 'Service/backstage')->name('backstage');//设置是否后台运行
                 Route::get('get_send_id', 'Service/getSendId')->name('getSendId');//获取发送消息sendid
                 Route::post('send_message', 'Service/sendMessage')->name('sendMessage');//发送消息
+                Route::get('softdeleteRecord/:id', 'Service/softdeleteRecord')->name('softdeleteRecord');//软删除聊天记录
 
             })->middleware(KefuAuthTokenMiddleware::class);
 
