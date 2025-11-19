@@ -133,5 +133,9 @@ class ChatServiceDialogueRecord extends BaseModel
     {
         $query->where('is_tourist', $value);
     }
+    public function searchIsDeletedAttr($query, $value)
+    {
+        $query->where('is_deleted', $value);
+    }
 }
 

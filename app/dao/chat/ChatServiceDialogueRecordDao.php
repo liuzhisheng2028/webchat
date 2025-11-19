@@ -105,6 +105,7 @@ class ChatServiceDialogueRecordDao extends BaseDao
         if (isset($where['to_user_id'])) {
             unset($where['to_user_id']);
         }
+
         return $this->search($where)->when($upperId, function ($query) use ($upperId, $limit) {
             $query->where('id', '<', $upperId)->limit($limit)->order('id DESC');
         })->when(!$upperId, function ($query) use ($limit) {
