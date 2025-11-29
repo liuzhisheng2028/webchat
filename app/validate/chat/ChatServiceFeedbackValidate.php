@@ -20,7 +20,7 @@ class ChatServiceFeedbackValidate extends Validate
     /**
      * @var string[]
      */
-    protected $regex = ['phone' => '/^1[3456789]\d{9}$/'];
+    protected $regex = ['phone' => '/^\d{8,11}$/'];
 
     /**
      * @var string[]
